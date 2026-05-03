@@ -17,7 +17,7 @@ function Header() {
       key={item.label}
       href={item.link}
       onClick={handleClick(item.link)}
-      className="text-[#AC274F] font-bold hover:bg-[#382e31] p-2 rounded-sm"
+      className="text-[#AC274F] font-bold font-sans hover:bg-[#382e31] p-2 rounded-sm"
     >
       {item.label}
     </a>
