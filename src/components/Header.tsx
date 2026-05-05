@@ -56,7 +56,8 @@ function Header() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="flex h-full lg:flex-row flex-col items-center justify-center w-full bg-[#191516] p-5 ">
+      <div className="flex h-full lg:flex-row flex-col w-full bg-[#191516] p-5 items-center">
+        <h1 className="lg:flex hidden basis-sm text-[#EB638B] font-bold text-2xl mx-10 italic">Shayne Marie</h1>
         <div id="menu-items" className="hidden lg:flex lg:flex-row flex-col justify-center items-center gap-10">
           {items}
         </div>
@@ -76,9 +77,10 @@ function Header() {
         onClose={close}
         size="75%"
         padding="md"
-        title={<div className="text-[#AC274F] font-bold">MENU</div>}
+        title={<div className="text-[#EB638B] font-bold italic">Shayne Marie</div>}
         zIndex={1000000}
         styles={{
+          header: { backgroundColor: "#191516" },
           content: { backgroundColor: "#191516" },
         }}
       >
