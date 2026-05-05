@@ -1,5 +1,7 @@
 import Header from "./components/Header";
 import pfp from "./assets/pfp.png";
+import linkedin from "./assets/linkedin.png";
+import github from "./assets/github-sign.png";
 import Card from "./components/Card";
 
 function App() {
@@ -7,7 +9,7 @@ function App() {
     {
       title: "Skills",
       content: (
-        <p className="text-[#FFD9DA] font-sans text-xl lg:text-2xl">
+        <p className="text-[#FFD9DA] font-sans text-md lg:text-lg">
           JavaScript, Typescript, ReactJS/TS, C#, .NET, SQL, Android Studio,
           Git, Firebase, Figma, Ibis Paint X, Canva, Krita, and more!
         </p>
@@ -16,7 +18,7 @@ function App() {
     {
       title: "Experience",
       content: (
-        <p className="text-[#FFD9DA] font font-sans text-xl lg:text-2xl">
+        <p className="text-[#FFD9DA] font font-sans text-md lg:text-lg">
           Front-end and back-end development intern at{" "}
           <a
             href="https://simplevia.com"
@@ -32,7 +34,7 @@ function App() {
     {
       title: "Education",
       content: (
-        <p className="text-[#FFD9DA] font font-sans text-xl lg:text-2xl">
+        <p className="text-[#FFD9DA] font font-sans text-md lg:text-lg">
           BS Information Technology at New Era University
         </p>
       ),
@@ -80,7 +82,7 @@ function App() {
             <div className="flex flex-col lg:flex-row">
               <p className="text-[#FFD9DA] font-sans text-xl basis-full lg:basis-1/2 pb-10">
                 I'm a passionate full-stack developer with experience in
-                creating dynamic and responsive web applications.
+                creating dynamic web applications.
               </p>
             </div>
 
@@ -95,10 +97,17 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="projects" className="flex flex-row lg:h-screen"></section>
+        <section id="projects" className="flex flex-col w-full lg:h-screen p-20">
+          <div className="flex flex-col lg:flex-row-reverse gap-y-5 gap-x-5 items-center pt-20">
+            <h1 className="text-[#EB638B] justify-end font-bold font-sans italic text-4xl lg:text-5xl basis-1/4">
+              PROJECTS
+            </h1>
+            <div className="border-y-5 border-[#FFD9DA] flex rounded-lg px-5 basis-3/4"></div>
+          </div>
+        </section>
         <footer id="contact" className="flex flex-row lg:h-screen">
           <div className="flex flex-col w-full gap-10 p-20 bg-[#191516]">
-            <p className="text-[#EB638B] font-bold font-sans italic text-4xl lg:text-5xl basis-1/4">
+            <p className="text-[#EB638B] font-bold font-sans italic text-4xl lg:pt-20 lg:text-5xl">
               Contact Me!
             </p>
             <p className="text-[#FFD9DA] font font-sans text-md lg:text-lg">
@@ -110,8 +119,23 @@ function App() {
                 gulmayoshayne@gmail.com
               </a>
             </p>
-            <div className="flex flex-col lg:flex-row">
-
+            <div className="flex gap-5 flex-row">
+              <a
+                href="https://www.linkedin.com/in/shayne-gulmayo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#EB638B] hover:underline"
+              >
+                <img src={linkedin} alt="LinkedIn" className="w-20 h-20" />
+              </a>
+              <a
+                href="https://github.com/ShayneGulmayo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#EB638B] hover:underline"
+              >
+                <img src={github} alt="GitHub" className="w-20 h-20 ml-4" />
+              </a>
             </div>
           </div>
         </footer>

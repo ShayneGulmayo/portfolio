@@ -7,8 +7,8 @@ type CardProps = {
 
 function Card({ title, content }: CardProps) {
   return (
-    <div className="flex flex-col gap-3 basis-1/3 bg-[#191516] p-5 rounded-lg min-h-64">
-      <p className="text-[#EB638B] font-bold font-sans text-3xl lg:text-5xl">
+    <div className="flex flex-col gap-3 basis-1/3 bg-[#191516] p-5 rounded-lg min-h-md">
+      <p className="text-[#EB638B] font-bold font-sans text-xl lg:text-3xl">
         {title}
       </p>
       {content}

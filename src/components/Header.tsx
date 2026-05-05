@@ -57,8 +57,8 @@ function Header() {
   return (
     <header className="sticky top-0 z-50">
       <div className="flex h-full lg:flex-row flex-col w-full bg-[#191516] p-5 items-center">
-        <h1 className="lg:flex hidden basis-sm text-[#EB638B] font-bold text-2xl mx-10 italic">Shayne Marie</h1>
-        <div id="menu-items" className="hidden lg:flex lg:flex-row flex-col justify-center items-center gap-10">
+        <h1 className="lg:flex hidden text-[#EB638B] font-bold text-2xl mx-15 italic">Shayne Marie</h1>
+        <div id="menu-items" className="hidden lg:flex flex-row items-center gap-10">
           {items}
         </div>
         <div className="w-full flex flex-row lg:hidden">
