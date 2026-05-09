@@ -4,8 +4,19 @@ import linkedin from "./assets/linkedin.png";
 import github from "./assets/github-sign.png";
 import Card from "./components/Card";
 import { Button } from "@mantine/core";
+import StudySyncSet from "./assets/studysync_set.jpg";
+import { Link } from "react-router-dom";
 
 function App() {
+  const featuredProject = {
+    title: "StudySync",
+    description:
+      "StudySync is an Android-based learning app with a chat room and AI integration to serve as a learning aid for students and learners.",
+    githubUrl: "https://github.com/ShayneGulmayo/StudySync-Flashcard-and-Quiz",
+    projectUrl: "/projects/studysync",
+    imageUrl: StudySyncSet,
+  };
+
   const aboutCards = [
     {
       title: "Skills",
@@ -98,30 +109,51 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="projects" className="flex flex-col w-full lg:h-screen p-20">
+        <section id="projects" className="flex flex-col w-full lg:min-h-screen p-20">
           <div className="flex flex-col lg:flex-row-reverse gap-y-5 gap-x-5 items-center pt-20">
             <h1 className="text-[#EB638B] text-shadow-sm text-shadow-black justify-end font-bold font-sans italic text-4xl lg:text-5xl basis-1/4">
               PROJECTS
             </h1>
             <div className="border-y-5 shadow-sm shadow-black border-[#FFD9DA] flex rounded-lg px-5 basis-3/4"></div>
           </div>
-          <div className="flex flex-col  lg:flex-row mt-20 items-center">
-              <div className="bg-[#191516] rounded-t-2xl lg:rounded-s-2xl justify-items-center p-10 lg:basis-1/2">
-                
-              </div>
-              <div className="shadow-gray-800 rounded-b-2xl shadow- shadow-lg bg-linear-to-br from-[#EB638B] to-[#FFD9DA] lg:rounded-e-2xl justify-items-center items-center justify-center p-10 lg:basis-1/2">
-                <p className="text-[#191516] font-semibold font-sans text-lg lg:text-2xl">
-                  StudySync
-                </p>
-                <p className="text-[#191516] font-sans text-md lg:text-xl text-center py-10">
-                  StudySync is an Android-based Learning App with chat room and AI integration to serve as a learning aid for students and learners.
-                </p>
-                <Button variant="outline" color="#191516" className="border-[#191516] hover:bg-[#191516] hover:text-[#EB638B]">
-                  <a href="https://github.com/ShayneGulmayo/StudySync-Flashcard-and-Quiz" target="_blank" rel="noopener noreferrer">
-                    View Project
-                  </a>
+          <div className="flex flex-col lg:flex-row mt-20 items-stretch shadow-gray-800 shadow-lg rounded-2xl overflow-hidden min-h-[32rem]">
+            <div className="bg-[#191516] p-10 lg:basis-1/2 flex flex-col justify-center gap-6">
+              <p className="text-[#EB638B] font-semibold font-sans text-2xl lg:text-3xl">
+                {featuredProject.title}
+              </p>
+              <p className="text-[#FFD9DA] font-sans text-md lg:text-xl">
+                {featuredProject.description}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  component={Link}
+                  to={featuredProject.projectUrl}
+                  variant="filled"
+                  color="#EB638B"
+                  className="hover:opacity-90"
+                >
+                  View Project
+                </Button>
+                <Button
+                  component="a"
+                  href={featuredProject.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="outline"
+                  color="#EB638B"
+                  className="border-[#EB638B] hover:bg-[#EB638B] hover:text-[#191516]"
+                >
+                  View GitHub
                 </Button>
               </div>
+            </div>
+            <div className="bg-linear-to-br from-[#EB638B] to-[#FFD9DA] p-8 lg:basis-1/2 flex items-center justify-center">
+              <img
+                src={featuredProject.imageUrl}
+                alt={`${featuredProject.title} preview`}
+                className="w-full max-w-md rounded-xl bg-white/30 p-4"
+              />
+            </div>
           </div>
         </section>
         <footer id="contact" className="flex flex-row lg:h-screen">
